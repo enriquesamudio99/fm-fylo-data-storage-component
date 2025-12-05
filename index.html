@@ -1,22 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Fylo data storage component</title>
 
+  <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
+
 <body>
 
-  You've used 815 GB of your storage
+  <main class="main">
+    <div class="main__container container">
+      <div class="card">
+        <div class="card__container">
+          <div class="navbar">
+            <div class="navbar__content">
+              <img src="./assets/images/logo.svg" alt="Fylo Logo" class="navbar__logo">
+              <div class="navbar__icons">
+                <div class="navbar__icon">
+                  <img src="./assets/images/icon-document.svg" alt="Document Icon" class="navbar__icon-img">
+                </div>
+                <div class="navbar__icon">
+                  <img src="./assets/images/icon-folder.svg" alt="Folder Icon" class="navbar__icon-img">
+                </div>
+                <div class="navbar__icon">
+                  <img src="./assets/images/icon-upload.svg" alt="Upload Icon" class="navbar__icon-img">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="storage">
+            <div class="storage__content">
+              <div class="storage__popup">
+                <p class="storage__popup-title">185 <span class="storage__popup-title-span">GB Left</span></p>
+              </div>
+              <p class="storage__title">You've used <span class="storage__title-span">815 GB</span> of your storage</p>
+              <div class="storage__bar-container">
+                <div class="storage__bar"></div>
+              </div>
+              <div class="storage__info">
+                <p class="storage__info-text">0 GB</p>
+                <p class="storage__info-text">1000 GB</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
 </body>
+
 </html>
