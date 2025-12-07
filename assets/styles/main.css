@@ -72,6 +72,27 @@ body {
   background-color: var(--clr-blue-900);
   color: var(--clr-white);
   font: var(--txt-preset-2-regular);
+  background-image: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (min-width: 40rem) {
+  body {
+    background-color: var(--clr-blue-950);
+    background-image: url("../images/bg-tablet.png");
+    background-size: contain;
+    background-position: center bottom;
+  }
+}
+
+@media (min-width: 68.75rem) {
+  body {
+    background-image: url("../images/bg-desktop.png");
+    background-size: contain;
+    background-position: center bottom;
+  }
 }
 
 h1,
@@ -146,10 +167,16 @@ ol {
 
 /* Globals */
 .main {
-  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 62rem) {
+  .main {
+    align-items: flex-start;
+  }
 }
 
 .container {
@@ -170,6 +197,16 @@ ol {
 }
 
 /* End Globals */
+.card {
+  margin: 2rem 0;
+}
+
+@media (min-width: 62rem) {
+  .card {
+    margin: 18.0625rem 0;
+  }
+}
+
 .card__container {
   display: flex;
   flex-direction: column;
@@ -190,6 +227,7 @@ ol {
   background-color: var(--clr-blue-850);
   border-radius: .625rem 6.25rem .625rem .625rem;
   padding: 2.5rem;
+  box-shadow: 0 4.6875rem 6.25rem -1.875rem rgba(0, 0, 0, 0.2478);
 }
 
 @media (min-width: 40rem) {
@@ -228,6 +266,7 @@ ol {
   border-radius: .625rem;
   padding: 2.5rem 2rem;
   position: relative;
+  box-shadow: 0 4.6875rem 6.25rem -1.875rem rgba(0, 0, 0, 0.2478);
 }
 
 .storage__content {
@@ -235,6 +274,12 @@ ol {
   flex-direction: column;
   align-items: center;
 }
+
+@media (min-width: 40rem) {
+  .storage__content {
+    align-items: flex-start;
+  }
+} 
 
 .storage__popup {
   position: absolute;
@@ -251,6 +296,30 @@ ol {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4.6875rem 6.25rem -1.875rem rgba(0, 0, 0, 0.2478);
+}
+
+@media (min-width: 40rem) {
+  .storage__popup {
+    bottom: -2rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  .storage__popup {
+    left: unset;
+    bottom: unset;
+    right: 2.4063rem;
+    transform: none;
+    top: -2.4375rem;
+    border-radius: .625rem .625rem 0 .625rem;
+  }
+
+  .storage__popup::after {
+    content: url("../images/triangle.svg");
+    position: absolute;
+    top: 60px;
+    right: 0;
+  }
 }
 
 .storage__popup-title {
@@ -289,6 +358,12 @@ ol {
   border-radius: .5rem;
   background: var(--gradient-two);
   position: relative;
+}
+
+@media (min-width: 40rem) {
+  .storage__bar {
+    width: 21.375rem;
+  }
 }
 
 .storage__bar::after {
